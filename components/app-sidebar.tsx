@@ -1,0 +1,128 @@
+"use client";
+
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@/components/ui/sidebar";
+
+import {
+  CreditCard,
+  Image as ImageIcon,
+  LayoutDashboard,
+  LogOut,
+  Settings,
+  User,
+  Zap,
+} from "lucide-react";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Separator } from "./ui/separator";
+
+const items = [
+  {
+    title: "Dashboard",
+    url: "/dashboard",
+    icon: LayoutDashboard,
+  },
+  {
+    title: "Users",
+    url: "/users",
+    icon: User,
+  },
+  {
+    title: "AI Usage",
+    url: "/usage",
+    icon: Zap,
+  },
+  {
+    title: "Billing",
+    url: "/billing",
+    icon: CreditCard,
+  },
+];
+
+export function AppSidebar() {
+  const pathname = usePathname();
+
+  return (
+    <Sidebar variant="floating" collapsible="icon">
+      {/* Header */}
+      <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <Link href="/dashboard" className="font-semibold">
+                <ImageIcon />
+                <span>AImate Admin</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <Separator />
+        </SidebarMenu>
+      </SidebarHeader>
+
+      {/* Content */}
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map((item) => {
+                const isActive = pathname === item.url;
+
+                return (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton
+                      asChild
+                      className={isActive ? "bg-accent font-medium" : ""}
+                    >
+                      <Link href={item.url}>
+                        <item.icon />
+                        <span>{item.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+
+      {/* Footer */}
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <Link href="/settings">
+                <Settings />
+                <span>Settings</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              className="text-red-600 hover:bg-red-100 dark:hover:bg-red-950"
+            >
+              <Link href="/logout">
+                <LogOut />
+                <span>Log out</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
+    </Sidebar>
+  );
+}
