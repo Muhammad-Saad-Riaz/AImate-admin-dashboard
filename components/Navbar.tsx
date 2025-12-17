@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ModeToggle } from "@/components/ModeToggle";
 import {
@@ -14,41 +17,65 @@ import { Input } from "./ui/input";
 
 const Navbar = () => {
   return (
-    <nav className="p-4 flex items-center justify-between sticky top-0 bg-background z-10 border-accent border-b-2">
+    <motion.nav
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="p-4 flex items-center justify-between sticky top-0 bg-background z-10 border-accent border-b-2"
+    >
       {/* Left */}
       <SidebarTrigger />
 
       {/* Right */}
-      <div className="flex gap-2">
+      <div className="flex gap-3 items-center">
         {/* Placeholder Search */}
-        <div className="relative w-64">
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.15 }}
+          className="relative w-64"
+        >
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
-          <Input placeholder="Search (coming soon)" className="pl-9 cursor-not-allowed opacity-70" disabled />
-        </div>
+          <Input
+            placeholder="Search (coming soon)"
+            className="pl-9 cursor-not-allowed opacity-70"
+            disabled
+          />
+        </motion.div>
+
         <ModeToggle />
 
         {/* USER MENU */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Avatar>
-              <AvatarImage
-                src="https://github.com/user1.png"
-                className="bg-accent"
-              />
-              <AvatarFallback>User</AvatarFallback>
-            </Avatar>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.15 }}
+              className="cursor-pointer"
+            >
+              <Avatar>
+                <AvatarImage
+                  src="https://github.com/user1.png"
+                  className="bg-accent"
+                />
+                <AvatarFallback>User</AvatarFallback>
+              </Avatar>
+            </motion.div>
           </DropdownMenuTrigger>
+
           <DropdownMenuContent sideOffset={4}>
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
+
             <DropdownMenuItem>
               <User className="h-[1.2rem] w-[1.2rem] mr-2" />
               Profile
             </DropdownMenuItem>
+
             <DropdownMenuItem>
               <Settings className="h-[1.2rem] w-[1.2rem] mr-2" />
               Settings
             </DropdownMenuItem>
+
             <DropdownMenuItem variant="destructive">
               <LogOut className="h-[1.2rem] w-[1.2rem] mr-2" />
               Logout
@@ -56,7 +83,7 @@ const Navbar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
