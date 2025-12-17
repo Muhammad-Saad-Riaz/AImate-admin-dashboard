@@ -6,6 +6,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { cookies } from "next/headers";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,9 +44,9 @@ export default async function RootLayout({
           >
         <SidebarProvider defaultOpen={defaultOpen}>
           <AppSidebar />
-          <main className="flex-1">
-            <SidebarTrigger />
-            {children}
+          <main className="w-full">
+            <Navbar/>
+            <div className="px-4 pt-16"> {children} </div>
           </main>
         </SidebarProvider>
         </ThemeProvider>
