@@ -46,7 +46,7 @@ export default async function RootLayout({
           <AppSidebar />
           <main className="w-full">
             <Navbar/>
-            <div className="px-4 pt-16"> {children} </div>
+            <div className="px-4 pt-4"> {children} </div>
           </main>
         </SidebarProvider>
         </ThemeProvider>
