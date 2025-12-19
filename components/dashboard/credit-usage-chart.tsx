@@ -66,10 +66,10 @@ const CreditUsageChart = () => {
         <CardDescription>Novemeber 2025</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+        <div
+          // initial={{ opacity: 0, scale: 0.95 }}
+          // animate={{ opacity: 1, scale: 1 }}
+          // transition={{ duration: 0.4, ease: "easeOut" }}
         >
         <ChartContainer
           config={chartConfig}
@@ -119,7 +119,7 @@ const CreditUsageChart = () => {
             </Pie>
           </PieChart>
         </ChartContainer>
-        </motion.div>
+        </div>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 leading-none font-medium">

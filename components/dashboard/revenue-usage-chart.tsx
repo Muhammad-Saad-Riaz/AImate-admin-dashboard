@@ -68,7 +68,7 @@ const RevenueUsageChart = () => {
                 stroke="var(--chart-1)"
                 strokeWidth={2}
                 dot={false}
-                isAnimationActive
+                isAnimationActive={false}
                 animationDuration={1200}
               />
               <Line
@@ -77,7 +77,7 @@ const RevenueUsageChart = () => {
                 stroke="var(--chart-2)"
                 strokeWidth={2}
                 dot={false}
-                isAnimationActive
+                isAnimationActive={false}
                 animationDuration={1400}
               />
             </LineChart>
