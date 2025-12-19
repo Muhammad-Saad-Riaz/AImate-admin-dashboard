@@ -36,17 +36,17 @@ const items = [
   },
   {
     title: "Users",
-    url: "/users",
+    url: "/dashboard/users",
     icon: User,
   },
   {
     title: "AI Usage",
-    url: "/usage",
+    url: "/dashboard/usage",
     icon: Zap,
   },
   {
     title: "Billing",
-    url: "/billing",
+    url: "/dashboard/billing",
     icon: CreditCard,
   },
 ];
