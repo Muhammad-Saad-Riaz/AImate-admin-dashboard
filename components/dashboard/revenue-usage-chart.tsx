@@ -74,7 +74,7 @@ const RevenueUsageChart = () => {
               <Line
                 dataKey="aiUsage"
                 type="monotone"
-                stroke="var(--chart-2)"
+                stroke="var(--chart-3)"
                 strokeWidth={2}
                 dot={false}
                 isAnimationActive={false}

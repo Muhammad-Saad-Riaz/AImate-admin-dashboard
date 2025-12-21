@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import CreditUsageChart from "@/components/dashboard/credit-usage-chart";
 import RevenueUsageChart from "@/components/dashboard/revenue-usage-chart";
 import {
@@ -53,24 +53,28 @@ export default function DashboardOverviewPage() {
             title: "Total Users",
             value: "2,450",
             icon: Users,
+            color: "blue",
             desc: "Active accounts on the platform",
           },
           {
             title: "Monthly Revenue",
             value: "$45,231",
             icon: DollarSign,
+            color: "#BA8E23",
             desc: "+20.1% vs last month",
             highlight: true,
           },
           {
             title: "AI Generation Count",
             value: "1.2M",
+            color: "purple",
             icon: Sparkles,
             desc: "Total API calls this month",
           },
           {
             title: "Active Subscriptions",
             value: "987",
+            color: "green",
             icon: CreditCard,
             desc: "Accounts with a paid plan",
           },
@@ -86,7 +90,7 @@ export default function DashboardOverviewPage() {
                 <CardTitle className="text-sm font-medium">
                   {card.title}
                 </CardTitle>
-                <card.icon className="h-5 w-5 text-muted-foreground" />
+                <card.icon color={card.color} className="h-5 w-5 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-semibold mb-1">
