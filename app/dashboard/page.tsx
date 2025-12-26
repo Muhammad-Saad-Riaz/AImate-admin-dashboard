@@ -31,7 +31,7 @@ export default function DashboardOverviewPage() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="space-y-8"
+      className="space-y-8 mb-6"
     >
       {/* Header */}
       <motion.div variants={item}>
