@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 AImate - AI SaaS Dashboard
 
-## Getting Started
+**AImate** is a high-performance, professional-grade admin interface designed for modern AI platforms. Built with **Next.js 15**, this dashboard demonstrates a deep understanding of data visualization, complex state management, and type-safe form architecture.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌟 Key Features
+
+* **📊 Dynamic Analytics:** Real-time data visualization using **Recharts**, featuring interactive area charts and distribution breakdowns for AI credit monitoring.
+* **👥 Advanced User Management:** A robust user table powered by **TanStack Table v8**, including professional pagination, status badges, and search capabilities.
+* **⚡ Command Palette (CMD+K):** A global search and navigation tool for power users, allowing instant access to any part of the platform.
+* **🛡️ Type-Safe Settings:** Complex form management using **React Hook Form** and **Zod** validation, ensuring data integrity with immediate UI feedback.
+* **💳 Subscription & Billing:** A tiered pricing interface with a detailed invoice history and transaction management.
+* **🎨 Premium UI/UX:** A fully responsive, dark-mode-optimized design built with **Shadcn/UI** and smooth micro-interactions powered by **Framer Motion**.
+
+---
+
+## 🛠️ Technical Highlights
+
+### Performance & Architecture
+
+* **Next.js 15 App Router:** Utilized nested layouts to minimize re-renders and optimize navigation speed.
+* **Component-Driven Development:** Built a reusable library of UI primitives (cards, buttons, fields) using **Tailwind CSS**.
+* **Redirect Logic:** Optimized the root entry point to immediately guide users to the core dashboard experience, reducing bounce rates.
+
+### Data & Validation
+
+* **Schema-First Forms:** Used **Zod** to create a single source of truth for both TypeScript types and runtime validation, preventing "silent bugs" in configuration.
+* **Flexible Data Display:** Implemented **TanStack Table** to handle tabular data with a focus on scalability and ease of integration with future backend APIs.
+
+---
+
+## 💻 Tech Stack
+
+| Category | Technology |
+| --- | --- |
+| **Framework** | Next.js 15 (App Router) |
+| **Styling** | Tailwind CSS |
+| **Components** | Shadcn/UI (Radix UI) |
+| **Charts** | Recharts |
+| **Tables** | TanStack Table v8 |
+| **Forms** | React Hook Form + Zod |
+| **Animation** | Framer Motion |
+| **Icons** | Lucide React |
+
+---
+
+## 📂 Project Structure
+
+```text
+├── app/
+│   ├── dashboard/          # Core Dashboard Routes
+│   │   ├── users/          # User Management
+│   │   ├── usage/          # Analytics & Metrics
+│   │   ├── settings/       # Form Validation Logic
+│   │   └── billing/        # Subscription UI
+│   └── page.tsx            # Root Redirect Logic
+├── components/
+│   ├── dashboard/          # Dashboard specific components
+│   └── ui/                 # Shadcn/UI Base Components
+├── lib/                    # Shared utility functions
+└── public/                 # Static assets
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository:**
+```bash
+git clone https://github.com/your-username/aimate-dashboard.git
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
+```bash
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Run the development server:**
+```bash
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+
+
+4. **Build for production:**
+```bash
+npm run build
+
+```
+
+
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
