@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import CommandMenu from "@/components/dashboard/command-menu";
 import { ModeToggle } from "@/components/ModeToggle";
 import {
   DropdownMenu,
@@ -28,19 +29,9 @@ const Navbar = () => {
 
       {/* Right */}
       <div className="flex gap-3 items-center">
-        {/* Placeholder Search */}
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.15 }}
-          className="relative w-64"
-        >
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
-          <Input
-            placeholder="Search (coming soon)"
-            className="pl-9 cursor-not-allowed opacity-70"
-            disabled
-          />
-        </motion.div>
+
+        {/* COMMAND MENU */}
+        <CommandMenu/>
 
         <ModeToggle />
 

@@ -121,10 +121,10 @@ export function AppSidebar() {
               asChild
               className="text-red-600 hover:text-red-600 hover:bg-red-100 dark:text-red-500 dark:hover:bg-red-600/10"
             >
-              <Link href="/logout">
+              <div>
                 <LogOut />
                 <span>Log out</span>
-              </Link>
+              </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
