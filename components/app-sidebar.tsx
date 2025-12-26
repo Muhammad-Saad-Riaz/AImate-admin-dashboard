@@ -119,7 +119,7 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="text-red-600 hover:bg-red-100 dark:hover:bg-red-950"
+              className="text-red-600 hover:text-red-600 hover:bg-red-100 dark:text-red-500 dark:hover:bg-red-600/10"
             >
               <Link href="/logout">
                 <LogOut />

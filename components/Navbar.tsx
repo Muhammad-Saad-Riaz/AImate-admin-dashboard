@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { User, Settings, LogOut, Search } from "lucide-react";
+import { User, Settings, LogOut, Search, User2 } from "lucide-react";
 import { Input } from "./ui/input";
 
 const Navbar = () => {
@@ -52,13 +52,14 @@ const Navbar = () => {
               transition={{ duration: 0.15 }}
               className="cursor-pointer"
             >
-              <Avatar>
+              <User2 className="bg-accent rounded-full"/>
+              {/* <Avatar>
                 <AvatarImage
                   src="https://github.com/user1.png"
                   className="bg-accent"
                 />
                 <AvatarFallback>User</AvatarFallback>
-              </Avatar>
+              </Avatar> */}
             </motion.div>
           </DropdownMenuTrigger>
 

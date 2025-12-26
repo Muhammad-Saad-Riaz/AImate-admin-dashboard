@@ -117,7 +117,7 @@ function PricingPlans() {
 export default function BillingPage() {
   return (
     <motion.div
-      className="space-y-8 mt-4"
+      className="space-y-8 mt-4 mb-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
