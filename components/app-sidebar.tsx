@@ -64,10 +64,10 @@ export function AppSidebar() {
       {/* Header */}
       <SidebarHeader>
         <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild>
-              <Link href="/dashboard" className="font-semibold">
-                <ImageIcon />
+          <SidebarMenuItem className="">
+            <SidebarMenuButton className="h-10" asChild>
+              <Link href="/dashboard" className="font-semibold text-xl tracking-tight">
+                <ImageIcon/>
                 <span>AImate Admin</span>
               </Link>
             </SidebarMenuButton>
