@@ -1,4 +1,4 @@
-# 🚀 AImate - AI SaaS Dashboard
+# AImate - AI SaaS Dashboard
 
 **AImate** is a high-performance, professional-grade admin interface designed for modern AI platforms. Built with **Next.js 15**, this dashboard demonstrates a deep understanding of data visualization, complex state management, and type-safe form architecture.
 
@@ -101,3 +101,10 @@ npm run build
 ## 📄 License
 
 This project is open-source and available under the **MIT License**.
+
+---
+
+## 🔴 Live Preview
+```
+https://aimate-admin.vercel.app/
+```
